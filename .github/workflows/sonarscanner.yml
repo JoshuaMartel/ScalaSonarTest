@@ -23,7 +23,7 @@ jobs:
         # ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=JoshuaMartel   
+          -Dsonar.organization="Joshua Martel"   
           -Dsonar.projectKey=ScalaSonarTest   
           -Dsonar.sources=.   
           -Dsonar.host.url=https://sonarcloud.io
