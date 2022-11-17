@@ -22,7 +22,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          sonar-scanner   
           -Dsonar.organization=vmarinychev   
           -Dsonar.projectKey=cloudsonar1   
           -Dsonar.sources=.   
