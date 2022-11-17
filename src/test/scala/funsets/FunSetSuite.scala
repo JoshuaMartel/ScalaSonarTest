@@ -39,7 +39,6 @@ class FunSetSuite extends munit.FunSuite {
     val s3 = singletonSet(3)
     val s4 = singletonSet(4)
     val s5 = singletonSet(5)
-
   }
 
 
