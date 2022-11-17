@@ -178,7 +178,7 @@ class FunSetSuite extends munit.FunSuite {
       assert(forall(map(s,f1),p1))
     }
   }
-
+ 
 
   import scala.concurrent.duration._
   override val munitTimeout = 10.seconds
