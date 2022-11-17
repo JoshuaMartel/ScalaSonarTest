@@ -1,0 +1,20 @@
+on:
+  # Trigger analysis when pushing in master or pull requests, and when creating
+  # a pull request.
+  push:
+    branches:
+      - master
+  pull_request:
+      types: [opened, synchronize, reopened]
+name: Main Workflow
+jobs:
+  create_sonarcloud_project:
+    name: Create_SonarCloud_Project
+    runs-on: ubuntu-latest
+    steps:
+    - name: Created Sonar Project
+      uses: fjogeleit/http-request-action@master
+      with:
+        url: 'https://sonarcloud.io/api/projects/create?organization=joshuamartel&name=ScalaSonarTest&project=ScalaSonarTest'
+        method: 'POST'
+        data: '{"X-XSRF-TOKEN": "4lo850lg1tnpr0bpier8m84enu",  "_gid": "GA1.2.1459464845.1668693668", "XSRF-TOKEN":"4lo850lg1tnpr0bpier8m84enu", "_ga":"GA1.2.497287194.1668693668", "_gat_UA-1880045-10":"1", "JWT-SESSION":"eyJhbGciOiJIUzI1NiJ9.eyJsYXN0UmVmcmVzaFRpbWUiOjE2Njg3MTM0ODc3NzQsInhzcmZUb2tlbiI6IjRsbzg1MGxnMXRucHIwYnBpZXI4bTg0ZW51IiwianRpIjoiQVlTR1JIRFF0d1IwS05uZkllNlQiLCJzdWIiOiJBWVNDWEJlMmlaOUJja2JVenl4aCIsImlhdCI6MTY2ODY5OTk0MywiZXhwIjoxNjY4Nzk5ODg3fQ.0Y_dvZ9Z1gY-tmUCnBncfAHFXjd1MuFsBaJdppvwQPM", "_ga_3BQP5VHE6N":"GS1.1.1668709422.3.1.1668713488.0.0.0"}'
