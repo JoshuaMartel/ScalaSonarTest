@@ -19,7 +19,8 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: b2f9bd4a7d60180f55a56f10c0b95812416e2434
+        # ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
           -Dsonar.organization=vmarinychev   
