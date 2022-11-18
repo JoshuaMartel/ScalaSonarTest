@@ -40,14 +40,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: 7f9f3e2a8ae3deed3608cc96f699a6d7af09880b
-        #${{ inputs.sonar_token }}
-        #${{ secrets.SONAR_TOKEN }}
+        # ${{ inputs.sonar_token }}
+        # ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
           -Dsonar.organization=joshuamartel
-          #inputs.organization  
           -Dsonar.projectKey=funsets
-          #inputs.project_Key  
           -Dsonar.sources=.   
           -Dsonar.host.url=https://sonarcloud.io
 
