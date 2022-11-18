@@ -1,8 +1,8 @@
 on:
   # Trigger analysis when pushing in master or pull requests, and when creating
   # a pull request.
-  push:
-   branches:
+  #push:
+   #branches:
      - master
  # pull_request:
    #   types: [opened, synchronize, reopened]
@@ -39,7 +39,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: 7f9f3e2a8ae3deed3608cc96f699a6d7af09880b
+        SONAR_TOKEN: inputs.sonar_token
         # ${{ inputs.sonar_token }}
         # ${{ secrets.SONAR_TOKEN }}
       with:
