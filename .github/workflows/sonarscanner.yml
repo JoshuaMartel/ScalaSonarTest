@@ -23,6 +23,7 @@ on:
         required: true
       project_Key:
         required: true
+        type: string
       sonar_token:
         required: true
 name: Main Workflow
