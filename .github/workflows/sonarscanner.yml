@@ -44,7 +44,7 @@ jobs:
       with:
         args: >
           -Dsonar.organization=${{ inputs.organization }}
-          -Dsonar.projectKey= ${{ inputs.project_Key }}
+          -Dsonar.projectKey=${{ inputs.project_Key }}
           -Dsonar.sources=.   
           -Dsonar.host.url=https://sonarcloud.io
 
