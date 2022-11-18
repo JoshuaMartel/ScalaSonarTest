@@ -15,7 +15,7 @@ on:
         required: true
         type: string
     secrets:
-      token_sonar: 
+      sonar_token: 
         required: false
 name: Main Workflow
 jobs:
@@ -30,7 +30,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN:  ${{ secrets.token_sonar }}
+        SONAR_TOKEN:  ${{ secrets.sonar_token }}
         #${{ secrets.SONAR_TOKEN }}
       with:
         args: >
