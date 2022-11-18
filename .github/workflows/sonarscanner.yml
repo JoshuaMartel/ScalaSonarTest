@@ -1,11 +1,11 @@
 on:
   # Trigger analysis when pushing in master or pull requests, and when creating
   # a pull request.
-  push:
-    branches:
-      - master
-  pull_request:
-      types: [opened, synchronize, reopened]
+  #push:
+  #  branches:
+  #    - master
+ # pull_request:
+   #   types: [opened, synchronize, reopened]
   workflow_call:
     inputs:
       organization:
@@ -15,7 +15,7 @@ on:
         required: true
         type: string
     secrets:
-      token_sonar:
+      token_sonar: 
         required: true
 name: Main Workflow
 jobs:
