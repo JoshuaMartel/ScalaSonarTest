@@ -6,17 +6,17 @@ on:
   #    - master
  # pull_request:
    #   types: [opened, synchronize, reopened]
-  workflow_call:
-    inputs:
-      organization:
-        required: true
-        type: string
-      project_Key:
-        required: true
-        type: string
-    secrets:
-      sonar_token: 
-        required: false
+  #workflow_call:
+  #  inputs:
+  #    organization:
+  #      required: true
+  #      type: string
+   #   project_Key:
+  #      required: true
+  #      type: string
+  #  secrets:
+  #    sonar_token: 
+   #     required: false
   workflow_dispatch:
     inputs:
       organization:
@@ -43,8 +43,8 @@ jobs:
         #${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=organization  
-          -Dsonar.projectKey=project_Key  
+          -Dsonar.organization=inputs.organization  
+          -Dsonar.projectKey=inputs.project_Key  
           -Dsonar.sources=.   
           -Dsonar.host.url=https://sonarcloud.io
 
