@@ -17,6 +17,14 @@ on:
     secrets:
       sonar_token: 
         required: false
+  workflow_dispatch:
+    inputs:
+      organization:
+        required: true
+      project_Key:
+        required: true
+      sonar_token:
+        required: true
 name: Main Workflow
 jobs:
   sonarcloud:
