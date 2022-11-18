@@ -19,7 +19,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN:  7b6b69e7436b38ea4e34e6a181b06dacfd87a128
         #${{ secrets.SONAR_TOKEN }}
       with:
         args: >
